@@ -15,6 +15,6 @@ class String
   end
 
   def count_sentences
-    self.split(".").map {|a| a.split("!")}.flatten.map {|b| b.split("?")}.flatten.delete_if {|sentence| sentence == ""}.count
+    self.split(/[.!?] /).count
   end
 end
